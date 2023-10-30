@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --primary-color: #3bb7ad;
+  --secondary-color: #1e6db2;
+  --heading-color: #231f20;
+  --para-color: #2f2f30;
+  --black-color: #000;
+  --white-color: #fff;
+  --mulish-font-family: "Mulish", sans-serif;
+  --nunito-font-family: "Nunito", sans-serif;
+}
+
+.clrPrime {
+  color: var(--primary-color) !important;
+}
+
+.bg-clrPrime {
+  background-color: var(--primary-color) !important;
+}
+
+.clrSecondary {
+  color: var(--secondary-color) !important;
+}
+
+.bg-clrSecondary {
+  background-color: var(--secondary-color) !important;
+}
+
+/* Heading font families */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mulish-font-family);
+  color: var(--heading-color);
+}
+
+p,
+a,
+span {
+  color: var(--para-color);
+  font-family: var(--nunito-font-family);
+}
+
+/* Button Styling */
+.acube_btn {
+  padding: 14px 25px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  z-index: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid;
+}
+
+.acube_btn::before,
+.acube_btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.acube_btn::before {
+  z-index: -2;
+}
+
+.acube_btn::before {
+  
+  background-color: var(--white-color);
+  
+}
+
+.acube_btn::after {
+  background-color: var(--heading-color);
+}
+
+.acube_btn::after {
+  width: 140%;
+  left: -20%;
+  z-index: -1;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: skew(-35deg) scaleX(0);
+  -ms-transform: skew(-35deg) scaleX(0);
+  transform: skew(-35deg) scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.acube_btn:hover {
+  color: #fff !important;
+}
+
+.acube_btn:hover::after {
+  -webkit-transform: skew(-35deg) scaleX(1);
+  -ms-transform: skew(-35deg) scaleX(1);
+  transform: skew(-35deg) scaleX(1);
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 112, 244, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 5px 12px rgba(0, 112, 244, 0);
+  }
+}
+
+/* Button Dark */
+.acube_btn_dark::before {
+  background-color: var(--secondary-color);
+}
+
+.acube_btn_dark {
+  border-color: var(--secondary-color);
+  animation: pulse-animation 2s infinite;
+}
+
+.acube_btn_dark:hover {
+  border-color: var(--primary-color);
+}
+
+.acube_btn_dark::after {
+  background-color: var(--primary-color);
+}
+
+/* Button Light */
+.acube_btn_light::before {
+  background-color: transparent;
+}
+
+.acube_btn_light {
+  border-color: var(--white-color);
+}
+
+.acube_btn_light:hover {
+  border-color: var(--primary-color);
+  animation: pulse-animation 2s infinite;
+}
+
+.acube_btn_light::after {
+  background-color: var(--primary-color);
+}
+
+/* H1 Heading Start */
+.acube_h1 {
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+}
+
+/* H1 Heading End */
+/* H2 Heading Start */
+.acube_h2 {
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+}
+
+/* H2 Heading End */
+/* H3 Heading / Subheading Start/  */
+.subheading {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+}
+
+/* H3 Heading/ Subheading End */
+/* Paragraph Start */
+.acube_para {
+  font-size: 1.2em;
+  color: var(--text-para);
+  line-height: 1.9rem;
+  letter-spacing: -0.05em;
+  word-spacing: 0.1rem;
+}
+
+/* Paragraph End */
+/* *
+**
+*****
+********
+***********
+**************
+Start Your Own Styling
+**************
+***********
+********
+*****
+**
+* */
+
+/* contact us page css */
+
+/* defining own custom headings font */
+.acubee_h1 {
+  font-weight: 700;
+  font-size: 3.5em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+  font-family: var(--mulish-font-family);
+}
+
+.acubee_h2 {
+  font-weight: 600;
+  font-size: 2.2em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+  font-family: var(--mulish-font-family);
+}
+
+.contact-form-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.header-right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* form css start */
+
+/* input field  */
+.input-style {
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid #d0d0d0;
+  
+}
+
+/* adding css for the buttons */
+
+.checkbox_radio_container {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.checkbox_radio_container input[type="radio"] {
+  display: none;
+}
+
+.checkbox_radio_container label {
+  cursor: pointer;
+}
+
+.checkbox_radio_container .radio,
+.checkbox_radio_container .checkbox {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  /* background: ; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9;
+  left: 8px;
+  top: 13px;
+}
+
+.checkbox_radio_container .wrapper {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 50px;
+  background-color: white;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  /* padding: 15px 20px 15px 20px; */
+  /* padding: 13px 20px 13px 20px; */
+  padding: 8px 22px 8px 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: rgb(0 0 0 / 17%) 0px 12px 20px 2px;
+}
+
+
+
+.checkbox_radio_container input[type="checkbox"]:checked~.wrapper,
+.checkbox_radio_container input[type="radio"]:checked~.wrapper {
+  transition: all 450ms;
+  /* background-color: var(--secondary-color); */
+  color: #fff;
+  /* background-color: #2581ca; */
+  background-color: #3097e1;
+  /* background-color: rgb(62, 42, 107); */
+}
+
+/* ending css for the button */
+
+
+/* styling the form */
+ .contact-form-wrapper {
+
+/* background-color: #175d9a; */
+/* background-color: #1c6baf; */
+/* background-color: rgb(38, 31, 86); */
+/* background-color: #1e6db2; */
+background-color: #1a669e;
+/* background-color: #1c6aa2; */
+
+
+} 
+
+form {
+    /* background-color: #2581ca; */;
+}
+
+.content-form {
+  border: 3px solid #175d9a;
+  /* border: 3px solid rgb(38, 18, 84); */
+    border-radius: 20px;
+        /* background-color: #1c6baf; used */
+background-color: var(--secondary-color);
+        
+        /* background-color: rgb(45, 33, 101); */
+}
+
+/* placeholder color */
+input[type="text"]::-webkit-input-placeholder {
+  color: #d0d0d0; 
+}
+
+textarea::placeholder {
+  color:#d0d0d0;
+}
+/* max meas nech sa us limit number tk and min means us number sa upr tk  */
+
+@media (max-width: 992px) {
+  .acubee_h1 {
+    font-size: 2.5rem;
+    /* Your desired smaller font size for small screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .acubee_h2 {
+    font-size: 1.5em;   
+  }
+}
+@media (max-width: 767px) {
+  .acubee_h2 {
+    font-size: 1.2em;   
+  }
+}
+
+/* add responsive code here */
+@media (max-width: 767px) {
+  .checkbox_radio_container .wrapper {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 50px;
+      background-color: white;
+      position: relative;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      /* padding: 15px 20px 15px 20px; */
+      /* padding: 13px 20px 13px 20px; */
+      padding: 8px 15px 8px 15px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 10px!important;
+      box-shadow: rgb(0 0 0 / 17%) 0px 12px 20px 2px;
+    }
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .acube_para {
+      font-size: 0.8em!important;
+      color: var(--text-para);
+      line-height: 1.9rem;
+      letter-spacing: -0.05em;
+      word-spacing: 0.1rem;
+    }
+}
+@media (max-width: 991px) {
+  .full-width {
+    width: 100%;
+  }
+}
